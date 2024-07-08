@@ -1,0 +1,272 @@
+/* ===================================================================
+//////////////////////////////////////////////////////////////////////
+
+        _    _          _     _ _              _____  _____ _____ 
+        | |  | |        | |   | (_)            /  __ \/  ___/  ___|
+        | |  | | ___  __| | __| |_ _ __   __ _ | /  \/\ `--.\ `--. 
+        | |/\| |/ _ \/ _` |/ _` | | '_ \ / _` || |     `--. \`--. \
+        \  /\  /  __/ (_| | (_| | | | | | (_| || \__/\/\__/ /\__/ /
+        \/  \/ \___|\__,_|\__,_|_|_| |_|\__, (_)____/\____/\____/ 
+                                        __/ |                    
+                                        |___/                     
+                                                Style sheet for index
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ ====================================================================*/
+
+/* READ ME */
+/*-------------------------------------------------------------------*/
+/* ADD in text here for read me page */
+/*-------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////
+ __        __   __                __  ___           ___ 
+/ _` |    /  \ |__)  /\  |       /__`  |  \ / |    |__  
+\__> |___ \__/ |__) /~~\ |___    .__/  |   |  |___ |___ 
+                                                        
+//////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------*/
+
+/*********************************************************************  
+    Root Elements
+*********************************************************************/
+:root {
+    /* Heading Variables */
+    --heading-background-colour: #21543b ;
+    --header-font-color: #af8c4b;
+
+    /* Body Variables */
+    --body-background-color: #18392b;
+
+    /*Font Variables  */
+    --H1-font-color: #f4d16a;
+    --H2-font-color: #f0cc7e;
+    --H3-font-color: #a27137;
+    --para-font-color: white;
+
+    font-size: 1dvh;
+}
+
+@media only screen and (max-width: 800px) {
+
+    :root{
+        font-size: 1.1dvw;
+    }
+
+}
+
+
+/*********************************************************************  
+    HTML Elements
+*********************************************************************/
+html {
+    height: 100%;
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/*********************************************************************  
+    Universal Elements
+*********************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    animation-fill-mode: both;
+}
+
+/*---------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////
+     ___                __  ___           ___  __  
+|__|  |   |\/| |       /__`  |  \ / |    |__  /__` 
+|  |  |   |  | |___    .__/  |   |  |___ |___ .__/ 
+                                                      
+//////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------*/
+
+/*********************************************************************  
+    Body Section
+*********************************************************************/
+    body {
+        height: 100%;
+        width: 100%;
+        background-color: var(--body-background-color);
+        /* overflow: hidden; */
+    }
+
+/*********************************************************************  
+    Header Section
+*********************************************************************/
+/*---------------------------------------------------------------------
+    Header 
+---------------------------------------------------------------------*/
+
+    header {
+        /* Display + Sizing */
+        display: flex;
+
+        width: 100dvw;
+        height: 10vh;
+
+        /* Positioning */
+        position: fixed;
+        z-index: 10;
+
+        top: 90dvh;
+
+        /* Child Positioning */
+        justify-content: center;
+
+        /* Box Formatting */
+        background-color: var(--heading-background-colour);
+        border-top: 1.5px dotted var(--header-font-color);
+    }
+
+/*---------------------------------------------------------------------
+    Header > CLASS : Page Navigation
+---------------------------------------------------------------------*/
+    header .PageNavigation {
+
+        /* DISPLAY + SIZING */
+        display: flex;
+        flex: 1;
+
+        height: 100%;
+        width: 15%;
+         
+        /* CHILD POSITIONING*/
+        justify-content: center;
+        align-items: center;
+         
+        /* BOX FORMATING*/
+        background-color: #ffffff00;
+        border: none;
+    }
+
+/*---------------------------------------------------------------------
+    Header > CLASS : Page Navigation > Image
+---------------------------------------------------------------------*/
+
+    header .PageNavigation img{
+        object-fit: contain;
+        height: 100%
+    }
+
+/*---------------------------------------------------------------------
+    Header > CLASS : EXIT BUTTON
+---------------------------------------------------------------------*/
+    .ExitButton{
+        /* DISPLAY + SIZING */
+        display: none;
+        width: 100%;
+
+        /* POSITIONING*/
+        position: fixed;
+        justify-content: flex-end;
+        top: 3dvh;
+
+        /* POSITIONING CHILD */
+           
+        /* BOX FORMATING*/
+        background-color: rgb(255, 255, 255, 0);
+        padding: 0 5vh;
+        border: none;
+    }
+
+/*---------------------------------------------------------------------
+    Header > CLASS : EXIT BUTTON
+---------------------------------------------------------------------*/
+
+    header .ExitButton img{
+        /* DISPLAY + SIZING */
+        height: 50px;
+    }
+
+/*---------------------------------------------------------------------
+    Header > Phone Settings
+---------------------------------------------------------------------*/
+
+@media only screen and (max-width: 800px) {
+
+    header .PageNavigation img {
+        width: 20dvw;
+    }
+
+    .ExitButton{
+        justify-content: center;
+    }
+
+}
+
+/*********************************************************************  
+    Main Section
+*********************************************************************/
+
+main {
+    display: flex;
+}
+
+main .Landing {
+    display: flex;
+    flex-direction: row;
+
+    height: 90dvh;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+main .Landing img {
+    max-width: 33%;
+}
+
+.L-F-L {
+    max-height: 90dvh;
+    object-position: center right;
+    object-fit: contain;
+
+}
+
+.L-F-C {
+    max-height: 90dvh;
+    object-position: center center;
+    object-fit: contain;
+}
+
+.L-F-R {
+    max-height: 90dvh;
+    object-position: center left;
+    object-fit: contain;
+
+}
+
+
+main .Landing .LForeground {
+    flex: 1;
+    width: 80%;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #18392b5e;
+    border-radius: 5dvh;
+    z-index: 2;
+    top: 43dvh;
+}
+
+main .Landing .LForeground .title-bar-top{
+    font-size: 4rem;
+    color: white;
+}
+
+main .Landing .LForeground .title-bar-bottom{
+    font-size: 6rem;
+    color: white;
+}
+

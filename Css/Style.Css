@@ -1,0 +1,741 @@
+/* ===================================================================
+//////////////////////////////////////////////////////////////////////
+
+        _    _          _     _ _              _____  _____ _____ 
+        | |  | |        | |   | (_)            /  __ \/  ___/  ___|
+        | |  | | ___  __| | __| |_ _ __   __ _ | /  \/\ `--.\ `--. 
+        | |/\| |/ _ \/ _` |/ _` | | '_ \ / _` || |     `--. \`--. \
+        \  /\  /  __/ (_| | (_| | | | | | (_| || \__/\/\__/ /\__/ /
+        \/  \/ \___|\__,_|\__,_|_|_| |_|\__, (_)____/\____/\____/ 
+                                        __/ |                    
+                                        |___/                     
+                                                Style sheet for index
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ ====================================================================*/
+
+/* READ ME */
+/*-------------------------------------------------------------------*/
+/* ADD in text here for read me page */
+/*-------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////
+ __        __   __                __  ___           ___ 
+/ _` |    /  \ |__)  /\  |       /__`  |  \ / |    |__  
+\__> |___ \__/ |__) /~~\ |___    .__/  |   |  |___ |___ 
+                                                        
+//////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------*/
+
+/*********************************************************************  
+    Root Elements
+*********************************************************************/
+:root {
+    /* Heading Variables */
+    --heading-background-colour: #21543b ;
+    --header-font-color: #af8c4b;
+
+    /* Body Variables */
+    --body-background-color: #18392b;
+
+    /*Font Variables  */
+    --H1-font-color: #f4d16a;
+    --H2-font-color: #ebbc58;
+    --H3-font-color: #a27137;
+    --para-font-color: white;
+
+    font-size: 1dvh;
+}
+
+@media only screen and (max-width: 800px) {
+
+    :root{
+        font-size: 1.1dvw;
+    }
+
+}
+
+/*********************************************************************  
+    HTML Elements
+*********************************************************************/
+html {
+    height: 100%;
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/*********************************************************************  
+    Universal Elements
+*********************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    animation-fill-mode: both;
+}
+
+/*---------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////
+     ___                __  ___           ___  __  
+|__|  |   |\/| |       /__`  |  \ / |    |__  /__` 
+|  |  |   |  | |___    .__/  |   |  |___ |___ .__/ 
+                                                      
+//////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------*/
+
+/*********************************************************************  
+    Body Section
+*********************************************************************/
+    body {
+        height: 100%;
+        width: 100%;
+        background-color: var(--body-background-color);
+        /* overflow: hidden; */
+    }
+
+/*********************************************************************  
+    Header Section
+*********************************************************************/
+/*---------------------------------------------------------------------
+    Header 
+---------------------------------------------------------------------*/
+
+    header {
+        /* Display + Sizing */
+        display: flex;
+
+        width: 100%;
+        height: 10vh;
+
+        /* Positioning */
+        position: fixed;
+        z-index: 10;
+
+        top: 90dvh;
+
+        /* Child Positioning */
+        justify-content: center;
+
+        /* Box Formatting */
+        background-color: var(--heading-background-colour);
+        border-top: 1.5px dotted var(--header-font-color);
+    }
+
+/*---------------------------------------------------------------------
+    Header > CLASS : Page Navigation
+---------------------------------------------------------------------*/
+    header .PageNavigation {
+
+        /* DISPLAY + SIZING */
+        display: flex;
+        flex: 1;
+
+        height: 100%;
+        width: 15%;
+         
+        /* CHILD POSITIONING*/
+        justify-content: center;
+        align-items: center;
+         
+        /* BOX FORMATING*/
+        background-color: #ffffff00;
+        border: none;
+    }
+
+/*---------------------------------------------------------------------
+    Header > CLASS : Page Navigation > Image
+---------------------------------------------------------------------*/
+
+    header .PageNavigation img{
+        object-fit: contain;
+        height: 100%
+    }
+
+/*---------------------------------------------------------------------
+    Header > CLASS : EXIT BUTTON
+---------------------------------------------------------------------*/
+    .ExitButton{
+        /* DISPLAY + SIZING */
+        width: 100%;
+        display: none;
+
+        /* POSITIONING*/
+        position: fixed;
+        justify-content: flex-end;
+        top: 3dvh;
+        left: 45%;
+        z-index: 2;
+
+        /* POSITIONING CHILD */
+           
+        /* BOX FORMATING*/
+        background-color: rgb(255, 255, 255, 0);
+        padding: 0 5vh;
+        border: none;
+    }
+
+/*---------------------------------------------------------------------
+    Header > CLASS : EXIT BUTTON
+---------------------------------------------------------------------*/
+
+    header .ExitButton img{
+        /* DISPLAY + SIZING */
+        height: 50px;
+    }
+
+/*---------------------------------------------------------------------
+    Header > Phone Settings
+---------------------------------------------------------------------*/
+
+@media only screen and (max-width: 800px) {
+
+    header .PageNavigation img {
+        width: 20dvw;
+    }
+
+    .ExitButton{
+        justify-content: center;
+        left: 0%;
+    }
+
+}
+
+/*********************************************************************  
+    Main Section
+*********************************************************************/
+
+/*---------------------------------------------------------------------
+    Main
+---------------------------------------------------------------------*/
+    main {
+            position: fixed;
+            height: 200%;
+            width: 100dvw;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 90dvh 90dvh;
+            grid-template-areas: "Landing" "ContentA";
+            gap: 10dvh;
+            animation: fade 3s linear 1.5s 1 normal forwards;
+            opacity: 0;
+    }
+
+/*********************************************************************  
+    Main > Landing Section
+*********************************************************************/
+
+/*---------------------------------------------------------------------
+    Main > CLASS : Landing
+---------------------------------------------------------------------*/
+
+    main .Landing {
+        grid-area: Landing;
+        display: flex;
+        flex-direction: row;
+
+        height: 90dvh;
+        width: 100%;
+
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+
+
+/*---------------------------------------------------------------------
+    Main > CLASS : Landing > Foreground
+---------------------------------------------------------------------*/
+    main .Landing .LForeground {
+        flex: 1;
+        width: 80%;
+        position: absolute;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #18392b5e;
+        border-radius: 5dvh;
+        z-index: 2;
+        top: 43dvh;
+    }
+
+    main .Landing .LForeground .title-bar-top{
+        font-size: 4rem;
+        color: white;
+    }
+
+    main .Landing .LForeground .title-bar-bottom{
+        font-size: 6rem;
+        color: white;
+    }
+
+/*---------------------------------------------------------------------
+    Main > CLASS : Landing > img
+---------------------------------------------------------------------*/
+
+    main .Landing img {
+        max-width: 33%;
+    }
+
+/*---------------------------------------------------------------------
+    Main > CLASS : Landing > img > Seperate ID's
+---------------------------------------------------------------------*/
+    main .Landing .L-F-L {
+        max-height: 90dvh;
+        object-position: center right;
+        object-fit: contain;
+
+    }
+
+    main .Landing .L-F-C {
+        max-height: 90dvh;
+        object-position: center center;
+        object-fit: contain;
+    }
+
+    main .Landing .L-F-R {
+        max-height: 90dvh;
+        object-position: center left;
+        object-fit: contain;
+
+    }
+
+/*********************************************************************  
+    Main > Content Section
+*********************************************************************/
+
+/*---------------------------------------------------------------------
+    Main > CLASS : Content
+---------------------------------------------------------------------*/
+
+    main .Content {
+        /* DISPLAY + SIZING */
+        grid-area: "Contenta";
+        display: grid;
+
+        height: 90dvh;
+        width: 100dvw;
+
+        /* POSITIONING*/
+        
+        /* CHILD POSITIONING*/
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 0% 10%;
+        grid-template-areas: "Upper" "Middle" "Lower";
+
+        /* BOX FORMATING*/
+        align-content: center;
+    }
+
+/*---------------------------------------------------------------------
+    Main > CLASS : Content > ID : CONTENT-UPPER / Lower 
+---------------------------------------------------------------------*/
+    #Content-Upper {
+        grid-area: Upper;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+        background-color: var(--body-background-color); 
+    }
+
+    #Content-Lower {
+        grid-area: Lower;
+        display: flex;
+        justify-content: center;
+        background-color: var(--body-background-color); 
+        z-index: 2;  }
+
+    /*------------------------------------------------------------------
+    Lower / Upper > .FLowers 
+    -------------------------------------------------------------------- */
+    .flowers {
+        flex: 1;
+        max-width: 40dvh;
+}
+
+/*---------------------------------------------------------------------
+    Main > CLASS : Content > ID : CONTENT-Middle
+---------------------------------------------------------------------*/
+    #Content-Middle{
+        grid-area: "Middle";
+        width: 100%;
+        height: 100%;
+        
+        overflow: scroll;
+        z-index: 1; 
+        display: grid;
+        justify-items: center;
+
+    }
+
+/* 
+    ╔════════════════════════════════════════════════════════════════════════╗
+    ║    CSS SUB SECTION - MAIN / CONTENT / MIDDLE                           ║
+    ║________________________________________________________________________║
+    
+    ║________________________________________________________________________║*/
+
+/*  ║ *********************************************************************  ║
+    ║   ARTICLE
+    ║ *********************************************************************  ║*/
+
+        article{
+            height: 90dvh;
+            width: 90%;
+            box-sizing: border-box;
+            overflow: scroll;
+            /* display: none; */
+        }
+
+        #Venue, #Transport, #Story, #FAQ, #RSVP {
+            display: none;
+        }
+/*  ║                                                                        ║
+    ║ *********************************************************************  ║
+    ║   ARTICLE > Article Title
+    ║ *********************************************************************  ║
+    ║                                                                        ║*/
+        article .article-title{
+            font-family: "Alegreya+SC";
+            font-size: 6rem;
+            text-align: center;
+            color: var(--H1-font-color);
+            text-transform: uppercase;
+        }
+
+
+/*  ║                                                                        ║
+    ║ *********************************************************************  ║
+    ║   ARTICLE > Card
+    ║ *********************************************************************  ║
+    ║                                                                        ║*/
+        .Card{
+            margin: 1dvh 0;
+            padding: 1dvh 0;
+            width: 100%;
+            box-sizing: border-box;
+
+            display: grid;
+            grid-template-rows: 7dvh minmax(10dvh,50dvh);
+            grid-template-columns: 0.2fr repeat(4,1fr) 0.2fr;
+
+        }
+
+        .SCard{
+            margin: 1dvh 0;
+            padding: 1dvh 0;
+            width: 100%;
+            box-sizing: border-box;
+
+
+            display: grid;
+            grid-template-rows: 7dvh minmax(auto,30dvh);
+            grid-template-columns: 0.2fr repeat(4,1fr) 0.2fr;
+            
+        }
+
+        .LCard{
+            margin: 1dvh 0;
+            padding: 1dvh 0;
+            width: 100%;
+            box-sizing: border-box;
+
+            display: grid;
+            grid-template-rows: 5dvh minmax(auto,40dvh);
+            grid-template-columns: 0.2fr repeat(4,1fr) 0.2fr;
+
+            grid-template-areas:
+            ". C-Title C-Title C-Title C-Title ." 
+            ". C-Text C-Text C-Image C-Image  .";
+            
+        }
+
+        .QCard{
+            margin: 1dvh 0;
+            padding: 1dvh 0;
+            width: 100%;
+            box-sizing: border-box;
+
+            display: grid;
+            grid-template-rows: 1dvh minmax(auto,40dvh);
+            grid-template-columns: 0.2fr repeat(4,1fr) 0.2fr;
+
+            grid-template-areas:
+            ". C-Title C-Title C-Title C-Title ." 
+            ". C-Text C-Text C-Text C-Text .";
+            
+        }
+
+        .PCard{
+            margin: 1dvh 0;
+            padding: 0 1%;
+            width: 100%;
+            box-sizing: border-box;
+
+            display: grid;
+            grid-template-rows: minmax(1dvh,50dvh);
+            grid-template-columns: 0.1fr repeat(3, 1fr) 0.1fr ;
+            gap: 1dvw;
+            grid-template-areas:
+            ". Pimga Pimgb Pimgc ." ;
+        }
+
+        #Forward {
+            grid-template-areas:
+            ". C-Title C-Title C-Title C-Title ." 
+            ". C-Text C-Text C-Image C-Image  .";
+        }
+
+        #Reverse {
+            grid-template-areas:
+            ". C-Title C-Title C-Title C-Title ." 
+            ". C-Image C-Image C-Text C-Text .";
+        }
+
+        .C-Title{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            grid-area: C-Title;
+        }
+
+        .Q-Title{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin: 3dvh 0 1dvh 0;
+            padding: 0 3%;
+
+            grid-area: C-Title;
+        }
+
+        .C-para{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding: 0 3%;
+
+            grid-area: C-Title;
+        }
+
+        .C-Image {
+            grid-area: C-Image;
+            display: flex;
+        }
+        .C-Imageb{
+            grid-area: C-Text;
+            display: flex;
+        }
+
+        .C-Image img, .C-Imageb img {
+            flex: 1;
+            object-fit: cover;
+            max-width: 100%;  
+        }
+
+        .P-Imagea{
+            grid-area: Pimga;
+            display: flex;
+        }
+
+        .P-Imageb{
+            grid-area: Pimgb;
+            display: flex;
+        }
+
+        .P-Imagec{
+            grid-area: Pimgc;
+            display: flex;
+        }
+
+        .P-Imagea img, .P-Imageb img, .P-Imagec img{
+            flex: 1;
+            object-fit: cover;
+            max-width: 100%;  
+        }
+
+        #contain{
+            max-height: 50dvh;
+            object-fit: cover;
+        }
+
+        .C-Text{
+            display: flex;
+            flex-direction: column;
+            padding: 2%;
+
+            grid-area: C-Text;
+        }
+
+        .Q-Text{
+            display: flex;
+            flex-direction: column;
+            padding: 0 3%;
+
+            grid-area: C-Text;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .Card ,.SCard{    
+                grid-template-rows: 5dvh 20dvh auto;
+                grid-template-columns: 1fr;
+    
+            }
+
+            #Forward, #Reverse {
+                grid-template-areas:
+                "C-Title" 
+                "C-Image"
+                "C-Text";
+            }  
+
+            .PCard{
+                margin: 2dvh 0;
+                padding: 0 1%;
+                width: 100%;
+                
+                box-sizing: border-box;
+    
+                display: grid;
+                grid-template-rows: repeat(3, minmax(1dvh,35dvh));
+                grid-template-columns: 1fr;
+                gap: 1dvw;
+                grid-template-areas:
+                "Pimga" 
+                "Pimgb" 
+                "Pimgc" ;
+            }
+
+            .LCard{
+                margin: 1dvh 0;
+                /* padding: 1dvh 0; */
+                width: 100%;
+                box-sizing: border-box;
+    
+                display: grid;
+                grid-template-rows: 4dvh repeat(2, minmax(1dvh,35dvh));
+                grid-template-columns: 1fr;
+    
+                grid-template-areas:
+                "C-Title" 
+                "C-Text"
+                "C-Image";
+                
+    
+            }
+            
+        }
+
+
+
+
+
+    /*---------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////
+ ___  __       ___     __  ___           ___  __  
+|__  /  \ |\ |  |     /__`  |  \ / |    |__  /__` 
+|    \__/ | \|  |     .__/  |   |  |___ |___ .__/ 
+                                                                                                          
+//////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------*/
+
+/*********************************************************************  
+    Text - Headings
+*********************************************************************/
+h1 {
+    font-family: "Alegreya+SC";
+    font-size: 6rem;
+    text-align: center;
+    color: var(--H1-font-color);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "Alegreya+SC";
+    width: 100%;
+    font-size: 5rem;
+    color: var(--H2-font-color);
+}
+
+h3 {
+    font-family: "Alegreya+SC";
+    color: var(--H3-font-color);
+    font-size: 4rem;
+    text-align: left;
+    align-self: left;
+    justify-self: left;
+}
+
+/*********************************************************************  
+Text - Paragraph
+*********************************************************************/
+
+p{
+    color: white;
+    font-family: "Raleway";
+    font-size: 3rem;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    Paragraph - special formats
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+sup {
+    font-size: 1.5rem;
+}
+
+a {
+    font-size: 3rem;
+    color: var(--para-font-color);
+    text-decoration-line: underline;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+}
+
+/*********************************************************************  
+    Text - Table
+*********************************************************************/
+table *{
+    color: var(--para-font-color);
+    width: 50%;
+}
+
+td {
+    text-align: left;
+    font-family: "Raleway";
+    font-size: 3rem;
+}
+
+.table_column{
+    color: var(--para-font-color);
+    text-align: right;
+    padding: 0 10%;
+
+}
+
+/*********************************************************************  
+    Text - Lists
+*********************************************************************/
+ul {
+    color: black;
+    justify-self: left;
+    margin: 1% 5%;
+    list-style-position: inside;
+}
+
+li {
+    color: var(--para-font-color);
+    font-family: "Raleway";
+    font-size: 3rem;
+    text-align: left;
+
+}

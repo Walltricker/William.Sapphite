@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Website</title>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="/Css/Style.Css">
+    <link rel="stylesheet" href="/Css/Animations.Css">
+
+
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="
+        https://fonts.googleapis.com/css2?family=Alegreya+SC,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900
+        &family=Alegreya:ital,wght@0,400..900;1,400..900
+        &family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <!-- <script src="/button.js"></script> -->
+    <script src="/Script.js"></script>
+</head>
+
+<body>
+    <header>
+        <button class="PageNavigation" onclick="buttonClick(`Venue`)">
+            <img id="VenueUnclicked" src="resources/ICONS/Venue.PNG" alt="">
+        </button>
+        <button class="PageNavigation" onclick="buttonClick(`Taxi`)">
+            <img id="TaxiUnclicked" src="resources/ICONS/Hotel.PNG" alt="">
+        </button>
+        <button class="PageNavigation" onclick="buttonClick(`Story`)">
+            <img id="StoryUnclicked" src="resources/ICONS/About.PNG" alt="">
+        </button>
+        <button class="PageNavigation" onclick="buttonClick(`FAQ`)">
+            <img id="FAQUnclicked" src="resources/ICONS/FAQ.PNG" alt="">
+        </button>
+        <button class="PageNavigation" onclick="buttonClick(`RSVP`)">
+            <img id="RSVPUnclicked" src="resources/ICONS/RSVP.png" alt="">
+        </button>
+        <button class="ExitButton" onclick="ButtonClose()">
+            <img src="/resources/ICONS/close.png" alt="">
+        </button>
+    </header>
+    <main>
+        <section class="Landing">
+            <img class="L-F-L" src="/resources/Background-Art/Edge_L.png" alt="">
+            <img class="L-F-C" src="/resources/Background-Art/Sword.png" alt="">
+            <img class="L-F-R" src="/resources/Background-Art/Edge_R.png" alt="">
+            <div class="LForeground">
+                <span class="title-bar-top">The wedding of</span>
+                <span class="title-bar-bottom">William and Sapphire</span>
+            </div>           
+        </section>
+        <section class="Content">
+            <div id="Content-Upper">
+                <img class="flowers" src="/resources/Background-Art/Flowers T.png" alt="">
+            </div>
+            <div id="Content-Middle">
+                <article id="Venue">
+                    <h5 class="article-title">Wedding Details</h5>
+                    <div class="Card" id="Forward">
+                        <h1 class="C-Title">Venue</h1>
+                        <div class="C-Image">
+                            <img src="/resources/Images/MoatInside.jpg" alt="">
+                        </div>
+                        <div class="C-Text">
+                            <p>The wedding of William and Sapphire will take place on the 2<sup>nd</sup> of
+                                November 2024.</p><br></br>
+                            <p>The Moat is a Kent farmhouse with a beautiful 14<sup>th</sup> century barn in the
+                                village of
+                                Wrotham, which sits along Pilgrim’s Way and along the edge of the North Downs.
+                                We love the low beams, Tudor panelling, and open fires – a perfect cosy winter
+                                pub environment! <br></br> For our
+                                wedding, we have exclusive access to the barn, attached bar, and a small private
+                                garden. The rest of
+                                the pub and the main garden will remain open to members of the public, and dogs
+                                are welcome in those
+                                areas – but not in the wedding! The garden has space heaters, and there are
+                                outdoor nooks available for
+                                anyone needing a quiet moment. Parking is free, although you will have to enter
+                                your registration at the
+                                door.</p>
+                        </div>
+                    </div>
+                    <div class="Card" id="Reverse">
+                        <h1 class="C-Title">Order of Service</h1>
+                        <div class="C-Image">
+                            <img src="/resources/Images/moat.jpg" alt="">
+                        </div>
+                        <div class="C-Text">
+                            <table class="table">
+                                <tr>
+                                    <td class="table_column">1:00PM</td>
+                                    <td>Day Guests Arrive</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_column">2:00PM</td>
+                                    <td>Ceremony</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_column">2:30PM</td>
+                                    <td>Drinks Reception</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_column">4:00PM</td>
+                                    <td>Dinner</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_column">6:30PM</td>
+                                    <td>Speeches</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_column">7:30PM</td>
+                                    <td>Evening Guests Arrive</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_column">8:00PM</td>
+                                    <td>Cake Cutting</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_column">8:15PM</td>
+                                    <td>Music and Dancing</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_column">12:45PM</td>
+                                    <td>Taxis Home</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+                <article id="Transport">
+                    <h5 class="article-title">Hotels and Transport</h5>
+                    <div class="Card" id="Forward">
+                        <h1 class="C-Title">Hotels</h1>
+                        <div class="C-Image">
+                            <img src="/resources/Images/MoatHotel.jpg" alt="">
+                        </div>
+                        <div class="C-Text">
+                            <h3>Holiday Inn</h3>
+                            <p>We have a block of rooms reserved at the <a
+                                    href="https://www.ihg.com/holidayinn/hotels/gb/en/sevenoaks/maike/hoteldetail">Holiday
+                                    Inn
+                                    Sevenoaks</a>, just a 15-minute walk or 2-minute drive from the venue. To
+                                book
+                                one of these
+                                rooms, please call 01732 781500 and quote the reference ‘H82’. <br /> <br /> If
+                                there is still demand after
+                                these rooms are booked, we will look into booking a further block – please let
+                                us
+                                know if you
+                                would like a room but the block is full.
+                            </p>
+                            <br />
+                            <h3>Other Hotels</h3>
+                            <p>There are also several private hotels recommended by the venue:</p>
+                            <ul>
+                                <li>No64 at The Joiners</li>
+                                <li>St. Leonard’s B&B</li>
+                                <li>The Farm Houses</li>
+                                <li>The Carpenters Arms</li>
+                                <li>The Tickled Trout</li>
+                        </div>
+                    </div>
+                    <div class="Card" id="Reverse">
+                        <h1 class="C-Title">Transportation</h1>
+                        <div class="C-Image">
+                            <img src="/resources/Images/Fairway+Wedding+2.jpeg" alt="">
+                        </div>
+                        <div class="C-Text">
+                            <h3>Taxis</h3>
+                            <p>We recommend you call ahead to secure transportation if required. The following taxi
+                                companies
+                                are local to the venue:</p>
+                            <ul>
+                                <li><a href="https://www.oakstaxis.co.uk/">Oaks Taxis</a></li>
+                                <li><a href="https://sbstaxis.com/">SBS Taxis</a></li>
+                                <li><a href="https://www.boroughgreentaxi.co.uk/">Borough Green Taxis</a></li>
+                                <li><a href="https://www.thomsonlocal.com/search/taxis/wrotham-kent">Details of
+                                        additional taxi companies</a></li>
+                            </ul>
+                            <h3>Minibus Services</h3>
+                            <p>For groups wanting to share transportation to Wrotham, Minibus Hire has branches in:
+                            </p>
+                            <ul>
+                                <li><a href="https://www.minibushirecambridge.net/">Cambridge</a></li>
+                                <li><a href="https://www.minibushiresurrey.org/">Surrey</a></li>
+                            </ul>
+                            </ul>
+                        </div>
+                    </div>
+            
+                </article>
+                <article id="Story">
+                    <h5 class="article-title">Our Story</h5>
+                    <div class="SCard" id="Forward">
+                        <h2 class="C-Title">William</h2>
+                        <div class="C-Image">
+                            <img src="/resources/Photos/Will-child.jpg" alt="">
+                        </div>
+                        <div class="C-Text">
+                            <p>Will is originally from London, where he grew up with five siblings and one dog.
+                                He
+                                moved to Guildford to study before embarking on his legal career, and ended up
+                                staying for 10 years. Will is a man of many hobbies, including fire spinning,
+                                whiskey tasting, coding, and cooking. He has been known to go over-the-top with
+                                event planning, as anyone who attended his 29th birthday will remember. </p>
+                        </div>
+                    </div>
+                    <div class="SCard" id="Reverse">
+                        <h1 class="C-Title">Sapphire</h1>
+                        <div class="C-Image">
+                            <img src="/resources/Photos/Sapph-child.jpg" alt="">
+                        </div>
+                        <div class="C-Text">
+                            <p>Sapph grew up in Southampton, but her love of physics took her to Manchester and
+                                then Guildford to study. Wherever she goes, she fills the room with music,
+                                either by
+                                playing the piano or by exploring genres from Romanian folk to Uruguayan ska.
+                                She
+                                has a love of all things creative and crafty, whether that’s knitting, sewing,
+                                or
+                                painting, and on sunny days can reliably be found reading a book in the garden.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="SCard" id="Forward">
+                        <h1 class="C-Title">The Couple</h1>
+                        <div class="C-Image">
+                            <img id="contain" src="/resources/Photos/Meeting.jpg" alt="">
+                        </div>
+                        <div class="C-Text">
+                            <p>Will and Sapph first met by chance when he was celebrating his birthday at
+                                Sapph’s
+                                favourite pub. They didn’t expect to see each other again but were both
+                                delighted to
+                                keep on running into each other – until they agreed to meet on purpose.</p>
+                            <br />
+                            <p>During the first months of their relationship, they played board games, went on
+                                hikes in the beautiful Surrey Downs, and spent plenty of time at the pub. Six
+                                months
+                                later they moved in together during lockdown. Will taught Sapph how to play
+                                video
+                                games, and she taught him more about quantum physics than he wanted to know. <br />
+                                Luckily, this brought them closer together.<br /></p>
+                        </div>
+                    </div>
+                    <div class="PCard">
+                        <div class="P-Imagea">
+                            <img src="/resources/Photos/Rustic.jpg" alt="">
+                        </div>
+                        <div class="P-Imageb">
+                            <img src="/resources/Photos/golf.jpg" alt="">
+                        </div>
+                        <div class="P-Imagec">
+                            <img src="/resources/Photos/Sweet.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="LCard">
+                        <P class="C-para">
+                            These days, they are kept busy by two cats, attending festivals and gigs, improving
+                            their chess and squash games, and exploring the pubs of Cambridge. </p>
+                        <div class="C-Image">
+                            <img src="/resources/Photos/Ring.jpg" alt="">
+                        </div>
+                        <div class="C-Imageb">
+                            <img src="/resources/Photos/Engagement.jpg" alt="">
+                        </div>
+                    </div>
+                </article>
+                <article id="FAQ">
+                    <h5 class="article-title">Frequetly Asked Questions</h5>
+                    <div class="Q-Card">
+                        <h2 class="Q-Title">What is the dress code?</h2>
+                        <div class="Q-Text">
+                            <p>While our dress code is semi-formal, what we really want is for you to wear something
+                                that
+                                makes you feel confident and ready to party. Don’t feel obliged to shop – we’d love
+                                it if you wear
+                                something you already own. Dressing to theme is not required, but for those who
+                                would like to, our
+                                colours are deep green and gold.</p>
+                        </div>
+                    </div>
+                    <div class="Q-Card">
+                        <h2 class="Q-Title">What is the entertainment?</h2>
+                        <div class="Q-Text">
+                            <p>Throughout the wedding, you will find party games hidden in various locations.
+                                Finding these
+                                is half the fun! From 8pm, we will have live music in the bar provided by the one
+                                and only <a href="https://www.fivechambersfull.com/">Five
+                                    Chambers Full</a> and DJ sets from our favourite No Wave alumni. For
+                                those who prefer a quieter evening, we will have board games and art supplies set up
+                                in the barn –
+                                perfect for kids and adults. We will also have a photo booth set up in the bar
+                                throughout the day.</p>
+                        </div>
+                    </div>
+                    <div class="Q-Card">
+                        <h2 class="Q-Title">How can I contact you?<h2>
+                        <div class="Q-Text">
+                            <p>If you have any questions not covered here please email:</p>
+                            <p>william.and.sapphire@gmail.com. </p>
+                        </div>
+                    </div>
+                    <div class="Q-Card">
+                        <h2 class="Q-Title">Can I bring a date?</h2>
+                        <div class="Q-Text">
+                            <p>While our dress code is semi-formal, what we really want is for you to wear
+                                something
+                                that makes you feel confident and ready to party. Don’t feel obliged to shop –
+                                we’d
+                                love it if you wear
+                                something you already own. Dressing to theme is not required, but for those who
+                                would like to, our
+                                colours are deep green and gold.</p>
+                        </div>
+                    </div>
+                    <div class="Q-Card">
+                        <h2 class="Q-Title">Where is the venue?</h2>
+                        <div class="Q-Text">
+                            <iframe class="map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.27820762276!2d0.3294008!3d51.30600570000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df4aff5bbe4e57%3A0x906145f569d6a10d!2sThe%20Moat!5e0!3m2!1sen!2suk!4v1717268233320!5m2!1sen!2suk"
+                                style="border:0; height:500px;" loading="eager"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article id="RSVP">
+                    <h5 class="article-title">RSVP</h5>
+                    <iframe id="RSVP"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSedygCsRRWwVXxyeLpyi1ANAfZ40DCvNwWh9RA6VMYAsmqkJA/viewform?embedded=true"
+                        height="100%" width="100%">Loading…</iframe>
+                </article>
+            </div>
+
+            <div id="Content-Lower">
+                <img class="flowers" src="/resources/Background-Art/Flowers B.png" alt="">
+            </div>
+
+        </section>          
+    </main>
+</body>
+
+</html>
