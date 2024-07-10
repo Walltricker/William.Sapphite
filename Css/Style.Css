@@ -420,7 +420,7 @@ html {
             box-sizing: border-box;
 
             display: grid;
-            grid-template-rows: 7dvh minmax(10dvh,50dvh);
+            grid-template-rows: 7dvh minmax(10dvh,70dvh);
             grid-template-columns: 0.2fr repeat(4,1fr) 0.2fr;
 
         }
@@ -433,7 +433,7 @@ html {
 
 
             display: grid;
-            grid-template-rows: 7dvh minmax(auto,30dvh);
+            grid-template-rows: 7dvh minmax(10dvh,50dvh);
             grid-template-columns: 0.2fr repeat(4,1fr) 0.2fr;
             
         }
@@ -445,8 +445,9 @@ html {
             box-sizing: border-box;
 
             display: grid;
-            grid-template-rows: 5dvh minmax(auto,40dvh);
+            grid-template-rows: 20dvh 65dvh;
             grid-template-columns: 0.2fr repeat(4,1fr) 0.2fr;
+            grid-auto-rows: 60dvh;
 
             grid-template-areas:
             ". C-Title C-Title C-Title C-Title ." 
@@ -518,7 +519,7 @@ html {
             display: flex;
             justify-content: center;
             align-content: center;
-            padding: 0 3%;
+            padding: 0 1%;
 
             grid-area: C-Title;
         }
@@ -559,6 +560,16 @@ html {
             max-width: 100%;  
         }
 
+        #SapphPhoto{
+            object-position: 50% 15%;
+        }
+
+        #RusticPhoto{
+            object-position: 50% 18%;
+        }
+
+
+
         #contain{
             max-height: 50dvh;
             object-fit: cover;
@@ -582,11 +593,12 @@ html {
 
         iframe {
             border: none;
+            height: 100%;
         }
 
         @media only screen and (max-width: 800px) {
             .Card ,.SCard{    
-                grid-template-rows: 5dvh 20dvh auto;
+                grid-template-rows: 5dvh 30dvh auto;
                 grid-template-columns: 1fr;
     
             }
@@ -606,7 +618,7 @@ html {
                 box-sizing: border-box;
     
                 display: grid;
-                grid-template-rows: repeat(3, minmax(1dvh,35dvh));
+                grid-template-rows: repeat(3, minmax(1dvh,53dvh));
                 grid-template-columns: 1fr;
                 gap: 1dvw;
                 grid-template-areas:
@@ -620,17 +632,22 @@ html {
                 /* padding: 1dvh 0; */
                 width: 100%;
                 box-sizing: border-box;
-    
+                grid-template-rows: auto auto;
                 display: grid;
-                grid-template-rows: 4dvh repeat(2, minmax(1dvh,35dvh));
                 grid-template-columns: 1fr;
+
+                gap: 1dvh;
     
                 grid-template-areas:
                 "C-Title" 
                 "C-Text"
                 "C-Image";
-                
+                           
     
+            }
+
+            .LCard img{
+                object-position: center center;
             }
             
         }
@@ -683,6 +700,8 @@ p{
     color: white;
     font-family: "Raleway";
     font-size: 3rem;
+    text-decoration: none;
+    font-weight: 100;
 }
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
