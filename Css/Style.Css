@@ -195,6 +195,10 @@ html {
         width: 20dvw;
     }
 
+    header .PageNavigation{
+        align-items: flex-start;
+    }
+
     .ExitButton{
         justify-content: center;
         left: 0%;
