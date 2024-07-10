@@ -150,7 +150,7 @@ html {
 
     header .PageNavigation img{
         object-fit: contain;
-        height: 100%
+        height: 80%
     }
 
 /*---------------------------------------------------------------------
@@ -701,7 +701,7 @@ p{
     font-family: "Raleway";
     font-size: 3rem;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
